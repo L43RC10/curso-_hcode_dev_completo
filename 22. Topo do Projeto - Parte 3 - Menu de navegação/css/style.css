@@ -24,7 +24,7 @@ header .header-black li {
     background-image: url("../img/clubs.png");
     background-repeat: no-repeat;
     display: inline-block;
-    margin: 4px 8pxs;
+    margin: 4px 5px;
 }
 
 header .header-black li.club-01 {
@@ -112,6 +112,22 @@ header .header-black li a {
 #menu li {
 	display: inline-block;
 	font-family: 'OpenSans';
+}
+
+#menu li.search {
+	width: 182px;
+}
+
+#menu li.search input {
+	background-color: #5C2D90;
+	color: #fff;
+	border: none;
+	height: 30px;
+	line-height: 30px;
+}
+
+#menu li.search ::-webkit-input-placeholder {
+	color: #fff;
 }
 
 #menu li a {
