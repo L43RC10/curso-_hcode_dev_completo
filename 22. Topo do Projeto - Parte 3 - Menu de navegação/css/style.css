@@ -106,7 +106,7 @@ header .header-black li a {
 }
 
 #menu {
-	margin-top: 32px;
+	margin-top: 11px;
 }
 
 #menu li {
@@ -130,8 +130,26 @@ header .header-black li a {
 	color: #fff;
 }
 
+#menu li.search button {
+	background: none;
+	border: none;
+}
+
+#menu li.search button i {
+	font-size: 14px;
+	color: rgba(255, 255, 255, .5);
+	position: absolute;
+	bottom: 8px;
+	right: 20px;
+	z-index: 10;
+}
+
 #menu li a {
 	color: #fff;
 	font-size: 16px;
 	padding: 10px 25px;
+}
+
+#menu li.search .input-group {
+	top: 9px;
 }
