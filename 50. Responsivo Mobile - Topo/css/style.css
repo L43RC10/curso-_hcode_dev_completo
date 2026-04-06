@@ -469,11 +469,15 @@ footer .list-socials a {
 
 footer .list-socials i {
 	font-size: 16px;
-	/* margin-left: 15px; */
 }
 
 video {
 	width: 60%;
+}
+
+#btn-bars, #btn-search {
+	display: none;
+	background-color: red;
 }
 
 /* RESPONSIVIDADE */
@@ -486,14 +490,6 @@ video {
 }
 
 /* tamanhos padrão para smartphones */
-
-/* IMPRONVISO MEU */
-/* .header-black {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-} */
-/* IMPRONVISO MEU */
 
 @media only screen and (max-width: 480px){
 	.header-black ul, #menu {
