@@ -512,8 +512,13 @@ footer .col-get-in-touch .page-up {
 		display: none;
 	}
 
-	#logotipo {
+	header #logotipo {
 		left: 31%;
+		transition: 1s all;
+	}
+
+	header.open-menu #logotipo{
+		transform: rotate(360deg);
 	}
 
 	#btn-bars, #btn-search {
@@ -720,6 +725,7 @@ footer .col-get-in-touch .page-up {
 		position: fixed;
 		top: 0;
 		width: 100%;
+		z-index: 4;
 	}
 
 	footer .col-get-in-touch .page-up {
@@ -794,6 +800,28 @@ footer .col-get-in-touch .page-up {
 		background-color: transparent;
 		color: #FFF;
 		font-size: 22px;
+	}
+
+	header #input-search-mobile {
+		position: fixed;
+		transition: 1s all;
+		top: -40px;
+		width: 70%;
+		left: 15%;
+		background-color: #171F26;
+		color: #FFF;
+		height: 40px;
+		border: none;
+		padding-left: 15px;
+		outline: none;
+	}
+
+	header.open-search #input-search-mobile {
+		top: 0;
+	}
+
+	header.open-search #logotipo {
+		z-index: 4;
 	}
 
 }
