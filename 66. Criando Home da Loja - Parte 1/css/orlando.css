@@ -406,6 +406,7 @@ video {
 }
 
 .text-roxo {
+	font-family: arial;
 	color: #6E3EA4;
 }
 
@@ -417,18 +418,49 @@ video {
 	text-align: center;
 }
 
-#destaque-produtos .col-descicao h2 {
+#destaque-produtos .col-descricao h2 {
 	font-family: arial;
 	font-size: 20px;
 	color: #666;
+	margin-bottom: 30px;
 }
 
-#destaque-produtos .col-descicao .box-valor {
+#destaque-produtos .col-descricao .box-valor {
 	width: 100%;
 	position: relative;
 }
 
-#destaque-produtos .col-descicao .box-valor .text-reais {
+#destaque-produtos .col-descricao .box-valor .text-reais {
 	font-size: 18px;
 	font-weight: bold;
+	position: absolute;
+	top: 13px;
+	left: 29px;
+}
+
+#destaque-produtos .col-descricao .box-valor .text-valor {
+	font-size: 50px;
+	position: absolute;
+	top: -19px;
+	left: 60px;
+}
+
+#destaque-produtos .col-descricao .box-valor .text-valor-centavos {
+	font-size: 30px;  
+	position: absolute;
+	top: -13px;
+	left: 188px;
+}
+
+#destaque-produtos .col-descricao .btn-comprar {
+	font-style: 26px;
+	padding: 10px 0;
+}
+
+#destaque-produtos .col-descricao .btn-comprar .fa {
+	font-size: 34px;
+}
+
+#destaque-produtos .col-descricao .text-parcelas {
+	margin-top: 30px;
 }
