@@ -468,3 +468,21 @@ video {
 #destaque-produtos .col-descricao .text-parcelas {
 	margin-top: 30px;
 }
+
+#destaque-produtos-container .btn-destaque {
+	position: absolute;
+	top: 115px;
+	background: none;
+	border: none;
+	font-size: 60px;
+	color: #2A2A2A;
+	outline: none;
+}
+
+#destaque-produtos-container #btn-destaque-prev {
+	left: 0;
+}
+
+#destaque-produtos-container #btn-destaque-next {
+	right: 0;
+}
