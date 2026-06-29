@@ -8,6 +8,11 @@
 	src: url("../fonts/Open_Sans/OpenSans-Light.ttf");
 	font-size: 1em;
 }
+
+.p-0 {
+	padding: 0 !important;
+}
+
 header {
 	width: 100%;
 	height: 150px;
@@ -496,14 +501,50 @@ video {
 	text-align: center;
 }
 
-#promocoes .box-promocao.box1 {
-	font-family: arial;
-	font-size: 15px;
-	font-weight: bold;
+#promocoes .box-promocao.box-1 {
 	padding: 7px;
 }
 
-#promocoes .box-promocao.box1 p {
+#promocoes .box-promocao.box-1 p {
+	font-family: 'OpenSans-Light';
+	text-transform: uppercase;
+	font-size: 27px;
+	font-weight: bold;
 	position: absolute;
-	top: 20px;
+	top: 17px;
+	left: 10px;
+}
+
+#promocoes .box-promocao .text-ate {
+	position: absolute;
+	left: 15px;
+	top: 10px;
+	font-family: arial;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#promocoes .box-promocao .text-numero {
+	position: absolute;
+	left: 8px;
+	top: -10px;
+	font-family: 'OpenSans-Light';
+	font-size: 133px;	
+}
+
+#promocoes .box-promocao .text-porcento {
+	position: absolute;
+	top: 25px;
+	right: 5px;  
+	font-family: 'OpenSans';
+	font-size: 64px;
+}
+
+#promocoes .box-promocao .text-off {
+	position: absolute;
+	bottom: 10px;
+	right: 8px;
+	font-family: 'OpenSans-Light';
+	text-transform: uppercase;
+	font-size: 28px;
 }

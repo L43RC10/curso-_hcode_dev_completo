@@ -61,19 +61,17 @@
 				<button type="button" class="btn-destaque" id="btn-destaque-prev"><i class="fa fa-angle-left"></i></button>
 				<button type="button" class="btn-destaque" id="btn-destaque-next"><i class="fa fa-angle-right"></i></button>
 
-			</div>
-
-			<div id="promocoes">
+				<div id="promocoes">
 
 				<div class="row">
 
 					<div class="col-md-2">
 						<div class="box-promocao box-1">
-							<p>Escolha por desconto</p>
+							<p>Escolha <br> por <br> desconto</p>
 						</div>
 					</div>
 
-					<div class="col-md-10">
+					<div class="col-md-10 p-0">
 						<div class="row-fluid">
 							<div class="col-md-3">
 								<div class="box-promocao">
@@ -112,6 +110,10 @@
 
 				</div>
 			</div>
+
+			</div>
+
+			
 
 		</section>
 
