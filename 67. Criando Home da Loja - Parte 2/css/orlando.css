@@ -486,3 +486,24 @@ video {
 #destaque-produtos-container #btn-destaque-next {
 	right: 0;
 }
+
+#promocoes .box-promocao {
+	background-color: #6E3EA4;
+	width: 100%;
+	height: 150px;
+	position: relative;
+	color: #fff;
+	text-align: center;
+}
+
+#promocoes .box-promocao.box1 {
+	font-family: arial;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 7px;
+}
+
+#promocoes .box-promocao.box1 p {
+	position: absolute;
+	top: 20px;
+}
