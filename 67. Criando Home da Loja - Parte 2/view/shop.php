@@ -63,53 +63,54 @@
 
 				<div id="promocoes">
 
-				<div class="row">
+					<div class="row">
 
-					<div class="col-md-2">
-						<div class="box-promocao box-1">
-							<p>Escolha <br> por <br> desconto</p>
-						</div>
-					</div>
-
-					<div class="col-md-10 p-0">
-						<div class="row-fluid">
-							<div class="col-md-3">
-								<div class="box-promocao">
-									<div class="text-ate">até</div>
-									<div class="text-numero">40</div>
-									<div class="text-porcento">%</div>
-									<div class="text-off">off</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="box-promocao">
-									<div class="text-ate">até</div>
-									<div class="text-numero">60</div>
-									<div class="text-porcento">%</div>
-									<div class="text-off">off</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="box-promocao">
-									<div class="text-ate">até</div>
-									<div class="text-numero">80</div>
-									<div class="text-porcento">%</div>
-									<div class="text-off">off</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="box-promocao">
-									<div class="text-ate">até</div>
-									<div class="text-numero">85</div>
-									<div class="text-porcento">%</div>
-									<div class="text-off">off</div>
-								</div>
+						<div class="col-md-2">
+							<div class="box-promocao box-1">
+								<p>Escolha <br> por <br> desconto</p>
 							</div>
 						</div>
-					</div>
 
+						<div class="col-md-10 p-0">
+							<div class="row-fluid">
+								<div class="col-md-3">
+									<div class="box-promocao">
+										<div class="text-ate">até</div>
+										<div class="text-numero">40</div>
+										<div class="text-porcento">%</div>
+										<div class="text-off">off</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="box-promocao">
+										<div class="text-ate">até</div>
+										<div class="text-numero">60</div>
+										<div class="text-porcento">%</div>
+										<div class="text-off">off</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="box-promocao">
+										<div class="text-ate">até</div>
+										<div class="text-numero">80</div>
+										<div class="text-porcento">%</div>
+										<div class="text-off">off</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="box-promocao">
+										<div class="text-ate">até</div>
+										<div class="text-numero">85</div>
+										<div class="text-porcento">%</div>
+										<div class="text-off">off</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					
 				</div>
-			</div>
 
 			</div>
 

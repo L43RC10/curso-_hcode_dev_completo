@@ -492,6 +492,10 @@ video {
 	right: 0;
 }
 
+#promocoes {
+	margin-top: 55px;
+}
+
 #promocoes .box-promocao {
 	background-color: #6E3EA4;
 	width: 100%;
