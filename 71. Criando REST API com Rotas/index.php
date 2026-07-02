@@ -46,6 +46,16 @@ $app->get('/produtos', function(){
     // var_dump($data);
     // exit;
 
+    foreach($data as &$produto) {
+        $preco = $produto['preco'];
+        $centavos = explode(".", $preco);
+        $produto['preco'] = number_format($preco, 0, ",", ".");
+        $produto['centavos'] = end($centavos);
+        $produto['parcelas'] = 10;
+        $produto['parcela'] = number_format($preco/$produto['parcelas'], 2, ",", ".");
+        $produto['total'] = number_format($preco, 2, ",", ".");
+    }
+
     header('Content-Type: application/json; charset=utf-8');
     
     echo json_encode($data, JSON_UNESCAPED_UNICODE);

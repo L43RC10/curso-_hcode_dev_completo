@@ -191,37 +191,11 @@
 				}).then(function successCallback(response){
 					$scope.produtos = response.data;
 
-					// setTimeout(initCarousel, 1000);
+					setTimeout(initCarousel, 1000);
 
 				}, function errorCallback(response){
 					
-				})
-
-				// $scope.produtos.push({
-				// 	nome_prod_longo:"Smartphone Motorola Moto X Play Dual Chip Desbloqueado Android 5.1",
-				// 	foto_principal:"moto-x.png",
-				// 	preco:"1.259",
-				// 	centavos:"10",
-				// 	parcelas:8,
-				// 	parcela:"174,88",
-				// 	total:"1.399,00",
-
-				// });
-
-
-
-				// $scope.produtos.push({
-				// 	nome_prod_longo:"Iphone",
-				// 	foto_principal:"moto-x.png",
-				// 	preco:"1.259",
-				// 	centavos:"10",
-				// 	parcelas:8,
-				// 	parcela:"174,88",
-				// 	total:"1.399,00",
-
-				// });
-
-
+				});
 
 			});
 
