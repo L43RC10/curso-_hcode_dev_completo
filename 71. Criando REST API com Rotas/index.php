@@ -43,8 +43,8 @@ $app->get('/produtos', function(){
 
     $data = $sql->select("SELECT * FROM tb_produtos WHERE preco_promorcional > 0 ORDER BY preco_promorcional DESC LIMIT 3;");
 
-    var_dump($data);
-    exit;
+    // var_dump($data);
+    // exit;
 
     echo json_encode($data);
 
