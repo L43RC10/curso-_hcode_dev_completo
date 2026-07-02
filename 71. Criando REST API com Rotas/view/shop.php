@@ -158,59 +158,74 @@
 
 		<script>
 
-			angular.module("shop", []).controller("destaque-controller", function($scope){
+			angular.module("shop", []).controller("destaque-controller", function($scope, $http){
 
 				$scope.produtos = [];
 
-				$scope.produtos.push({
-					nome_prod_longo:"Smartphone Motorola Moto X Play Dual Chip Desbloqueado Android 5.1",
-					foto_principal:"moto-x.png",
-					preco:"1.259",
-					centavos:"10",
-					parcelas:8,
-					parcela:"174,88",
-					total:"1.399,00",
-
-				});
+				var initCarousel = function(){
+					$("#destaque-produtos").owlCarousel({
+						autoPlay: 5000,
+						items : 1,
+						singleItem: true
+					});
 
 
+					var owlDestaque = $("#destaque-produtos").data('owlCarousel');
 
-				$scope.produtos.push({
-					nome_prod_longo:"Iphone",
-					foto_principal:"moto-x.png",
-					preco:"1.259",
-					centavos:"10",
-					parcelas:8,
-					parcela:"174,88",
-					total:"1.399,00",
+					$('#btn-destaque-prev').on("click", function(){
 
-				});
+						owlDestaque.prev();
+
+					});
+
+					$('#btn-destaque-next').on("click", function(){
+
+						owlDestaque.next();
+
+					});
+				}
+
+				$http({
+					method: 'GET',
+					url: 'produtos'
+				}).then(function successCallback(response){
+					$scope.produtos = response.data;
+
+					// setTimeout(initCarousel, 1000);
+
+				}, function errorCallback(response){
+					
+				})
+
+				// $scope.produtos.push({
+				// 	nome_prod_longo:"Smartphone Motorola Moto X Play Dual Chip Desbloqueado Android 5.1",
+				// 	foto_principal:"moto-x.png",
+				// 	preco:"1.259",
+				// 	centavos:"10",
+				// 	parcelas:8,
+				// 	parcela:"174,88",
+				// 	total:"1.399,00",
+
+				// });
+
+
+
+				// $scope.produtos.push({
+				// 	nome_prod_longo:"Iphone",
+				// 	foto_principal:"moto-x.png",
+				// 	preco:"1.259",
+				// 	centavos:"10",
+				// 	parcelas:8,
+				// 	parcela:"174,88",
+				// 	total:"1.399,00",
+
+				// });
 
 
 
 			});
 
 			$(function(){
-				$("#destaque-produtos").owlCarousel({
-					autoPlay: 5000,
-					items : 1,
-					singleItem: true
-				});
-
-
-				var owlDestaque = $("#destaque-produtos").data('owlCarousel');
-
-				$('#btn-destaque-prev').on("click", function(){
-
-					owlDestaque.prev();
-
-				});
-
-				$('#btn-destaque-next').on("click", function(){
-
-					owlDestaque.next();
-
-				});
 
 				$('.estrelas').each(function(){
 					$(this).raty({
