@@ -64,3 +64,5 @@ $app->get('/produtos', function(){
 });
 
 $app->run();
+
+// AULA 71 FINALIZADA.. COMEÇAR A PARTIR DA AULA 72
