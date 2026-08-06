@@ -94,6 +94,7 @@
 			</div>
 
 			<div class="row">
+				<p>teste</p>
 
 				<div class="col-md-3" ng-repeat="produto in buscados">
 					<div class="box-produto-info">
@@ -125,7 +126,29 @@
 		$scope.produtos = [];
 		$scope.buscados = [];
 
-		// /produtos
+		var initCarousel = function(){
+			$("#destaque-produtos").owlCarousel({
+				autoPlay: 5000,
+				items : 1,
+				singleItem: true
+			});
+
+
+			var owlDestaque = $("#destaque-produtos").data('owlCarousel');
+
+			$('#btn-destaque-prev').on("click", function(){
+
+				owlDestaque.prev();
+
+			});
+
+			$('#btn-destaque-next').on("click", function(){
+
+				owlDestaque.next();
+
+			});
+		}
+
 		$http({
 			method: 'GET',
 			url: 'produtos'
@@ -138,45 +161,7 @@
 			
 		});
 
-		// /produtos-mais-buscados
-		$http({
-			method: 'GET',
-			url: 'produtos-mais-buscados'
-		}).then(function successCallback(response) {
-
-			$scope.buscados = response.data;
-
-			setTimeout(initEstrelas, 1000);
-
-		}, function errorCallback(response) {
-			// called asynchronously if an error occurs
-			// or server returns response with an error status.
-		});
-
 	});
-
-	var initCarousel = function(){
-		$("#destaque-produtos").owlCarousel({
-			autoPlay: 5000,
-			items : 1,
-			singleItem: true
-		});
-
-
-		var owlDestaque = $("#destaque-produtos").data('owlCarousel');
-
-		$('#btn-destaque-prev').on("click", function(){
-
-			owlDestaque.prev();
-
-		});
-
-		$('#btn-destaque-next').on("click", function(){
-
-			owlDestaque.next();
-
-		});
-	}
 
 	var initEstrelas = function() {
 
@@ -191,6 +176,19 @@
 
 	}
 
-</script>
+	
 
-<!-- paramos na minutagem 3:00 da aula 72 -->
+	$http({
+	  method: 'GET',
+	  url: 'produtos-mais-buscados'
+	}).then(function successCallback(response) {
+
+	    $scope.buscados = response.data;
+
+	    setTimeout(initEstrelas, 1000);
+
+	  }, function errorCallback(response) {
+	    // called asynchronously if an error occurs
+	    // or server returns response with an error status.
+	  });
+</script>

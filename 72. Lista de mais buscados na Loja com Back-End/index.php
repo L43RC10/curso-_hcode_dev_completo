@@ -89,5 +89,3 @@ $app->get('/produtos-mais-buscados', function(){
 });
 
 $app->run();
-
-// AULA 71 FINALIZADA.. COMEÇAR A PARTIR DA AULA 72
