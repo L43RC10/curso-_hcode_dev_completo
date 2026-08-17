@@ -137,6 +137,20 @@
 		}, function errorCallback(response){
 			
 		});
+		
+		// estrelas reviews
+		var initEstrelas = function() {
+
+			$('.estrelas').each(function(){
+				$(this).raty({
+					starHalf  : 'lib/raty/lib/images/star-half.png',
+					starOff   : 'lib/raty/lib/images/star-off.png',
+					starOn    : 'lib/raty/lib/images/star-on.png',
+					score     : parseFloat($(this).data("score")),
+				});
+			});
+
+		}
 
 		// /produtos-mais-buscados
 		$http({
@@ -176,19 +190,6 @@
 			owlDestaque.next();
 
 		});
-	}
-
-	var initEstrelas = function() {
-
-		$('.estrelas').each(function(){
-			$(this).raty({
-				starHalf  : 'lib/raty/lib/images/star-half.png',
-				starOff   : 'lib/raty/lib/images/star-off.png',
-				starOn    : 'lib/raty/lib/images/star-on.png',
-				score     : parseFloat($(this).data("score")),
-			});
-		});
-
 	}
 
 </script>
