@@ -69,7 +69,43 @@ $app->get('/produtos-mais-buscados', function(){
 
     $sql = new Sql();
 
-    $data = $sql->select("SELECT * FROM hcode_shop.tb_produtos LIMIT 4;");
+    $data = $sql->select("
+        SELECT 
+        tb_produtos.id_prod,
+        tb_produtos.nome_prod_curto,
+        tb_produtos.nome_prod_longo,
+        tb_produtos.codigo_interno,
+        tb_produtos.id_cat,
+        tb_produtos.preco,
+        tb_produtos.peso,
+        tb_produtos.largura_centimetro,
+        tb_produtos.altura_centimetro,
+        tb_produtos.quantidade_estoque,
+        tb_produtos.preco_promorcional,
+        tb_produtos.foto_principal,
+        tb_produtos.visivel,
+        cast(avg(review) as dec(10,2)) as media, 
+        count(id_prod) as total_reviews
+        FROM tb_produtos 
+        INNER JOIN tb_reviews USING(id_prod) 
+        GROUP BY 
+        tb_produtos.id_prod,
+        tb_produtos.nome_prod_curto,
+        tb_produtos.nome_prod_longo,
+        tb_produtos.codigo_interno,
+        tb_produtos.id_cat,
+        tb_produtos.preco,
+        tb_produtos.peso,
+        tb_produtos.largura_centimetro,
+        tb_produtos.altura_centimetro,
+        tb_produtos.quantidade_estoque,
+        tb_produtos.preco_promorcional,
+        tb_produtos.foto_principal,
+        tb_produtos.visivel
+        LIMIT 4;
+    ");
+
+    // $data = $sql->select("SELECT * FROM hcode_shop.tb_produtos LIMIT 4;");
 
     foreach($data as &$produto) {
         $preco = $produto['preco'];

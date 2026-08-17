@@ -100,8 +100,8 @@
 						<a href="#">
 							<img src="../../produtos/{{produto.foto_principal}}" alt="{{produto.nome_prod_longo}}" class="produto-img">
 							<h3>{{produto.nome_prod_longo}}</h3>
-							<div class="estrelas"  data-score="3"></div>
-							<div class="text-qtd-reviews text-arial-cinza">(300)</div>
+							<div class="estrelas"  data-score="{{produto.media}}"></div>
+							<div class="text-qtd-reviews text-arial-cinza">({{produto.total_reviews}})</div>
 							<div class="text-valor text-roxo">R$ {{produto.total}}</div>
 							<div class="text-parcelado text-arial-cinza">{{produto.parcelas}}x de R$ {{produto.parcela}} / sem juros</div>
 						</a>
