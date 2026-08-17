@@ -193,5 +193,3 @@
 	}
 
 </script>
-
-<!-- paramos na minutagem 3:00 da aula 72 -->
