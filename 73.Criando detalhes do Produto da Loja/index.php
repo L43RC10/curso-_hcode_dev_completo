@@ -124,6 +124,15 @@ $app->get('/produtos-mais-buscados', function(){
 
 });
 
-$app->run();
+$app->get("/produto/:id_prod", function($id_prod){
 
-// 73
+    $sql = new Sql();
+    $produtos = $sql->select("SELECT * FROM tb_produtos WHERE id_prod = $id_prod");
+    
+    $produto = $produtos[0];
+
+    require_once("view/shop-produto.php");
+
+});
+
+$app->run();
